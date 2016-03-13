@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    FOOTER
+\*------------------------------------*/
+.tp-footer{  
+	min-height: 170px; 
+	background: $gray-base;
+	border-top: 10px solid $red-base; 
+
+	.tp-logo-foo{
+		img{
+		    padding-top: 47px;
+		    margin-left: 40px;
+		    width: 200px;
+		    margin: 0 auto;
+		    @include respond-to(phones){ margin-bottom: 40px; }
+		    @include respond-to(tablets){ margin-bottom: 40px; }
+		}
+	}
+
+	.tp-newsletter{
+		padding-top: 50px; 
+
+		.tp-newsletter-title{
+		    padding: 0 20px 0 0;
+			color: $red-base;
+			font-size: 27px;
+			float: left;
+			font-family: $font-chunck;
+			@include respond-to(phones){ width: 100%; }; 
+		}
+
+		.btn-newsletter{
+		    border-radius: 0;
+			background: $red-base;
+			color: $light-base; 
+			font-size: 16px;
+			@extend .roboto-light;
+			text-align: center;
+			border: 0;
+			border-radius: 0 !Important;
+		}
+	}
+
+	.tp-footer-navigation{
+		margin-top: 50px;
+		display: inline-block;
+		@include respond-to(tablets){  width: 100%; text-align: center; }
+		@include respond-to(phones) {  width: 100%; text-align: center; }
+
+		.navbar-nav{
+
+		}
+
+		.navbar-nav > li{
+			@include respond-to(tablets) { display: inline-block; }
+			@include respond-to(phones)  { display: inline-block; }			
+			a{
+				@include respond-to(tablets) { font-size: 14px; }
+				@include respond-to(phones)  { font-size: 14px; }						
+			}    
+		}
+
+		.navbar-nav li > a{   
+			font-size: 19px;
+			@extend .roboto-light;
+			color: $body-bg;
+			background: none;
+			padding: 10px;
+			&:hover{
+				color: $light-base;
+				text-decoration: none;
+				background: none; 
+			}
+		}
+	} 
+}
+ 

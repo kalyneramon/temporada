@@ -1,0 +1,194 @@
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/ 
+.tp-header{
+	@extend .transition;
+	min-height: 102px;
+	background: $red-base;
+	width: 100%;
+	padding: 0 !important;
+	@include respond-to(phones) { height: auto; }
+  	@include respond-to(tablets) { height: auto; } 
+
+	.tp-logo{
+	    margin: 0;
+	    text-align: center;
+		height: 102px;
+		background: $gray-base; 
+		position: relative;
+		overflow: hidden;
+ 
+		img{ 			 
+			padding: 24px;
+    		margin: 0 auto;
+			@include respond-to(1400max) { width: 200px; margin: 26px auto; padding: 0;}
+			&:hover{
+				animation: pulse .2s ease;
+			}			
+		} 
+
+		@include respond-to(width990) {
+			&:after{ 
+			    position: absolute;
+			    content: '';
+			    right: -128px;
+			    background: $red-base;
+			    z-index: 2;
+			    top: -47px;
+			    width: 142px;
+			    height: 200px;
+			    -webkit-transform: translateY(0) rotate(-20deg);
+			    -moz-transform: translateY(0) rotate(-20deg);
+			    -o-transform: translateY(0) rotate(-20deg);
+			    -ms-transform: translateY(0) rotate(-20deg);
+			    transform: translateY(0) rotate(-20deg);
+			}
+		}
+	} 
+ 
+	.tp-navigation{
+		padding: 24px 0;
+		font-size: 20px;
+		@extend .roboto-light;
+		@include respond-to(phones)   { 
+			padding: 0; 
+			.navbar-nav{
+			    margin: 0 0 30px 0;
+			    padding: 30px;
+			}
+		}
+		@include respond-to(tablets)  { 
+			padding: 0; 
+			.navbar-nav{
+			    margin: 0 0 30px 0;
+			    padding: 30px;
+			}
+		}		
+
+		.navbar-nav{
+			@include respond-to(width990max) { display: none; width: 100%; }
+		}
+
+		.navbar-nav li{
+			@include respond-to(width990max){ display: inline-block; width: 100%;}
+		} 
+ 
+		.tp-nav-mobile-button{
+			width: 100%;
+			text-align: center; 
+			color: $light-base;
+			font-size: 20px;
+			@extend .roboto-bold;
+			display: none;
+			padding: 20px 0;
+			cursor: pointer;
+			span{ margin-right: 10px;}
+			@include respond-to(width990max) { display: block; }
+		} 
+		li > a{
+			color: $light-base;
+			position: relative;
+			&:link,
+			&:visited,
+			&:hover,
+			&:active{
+				color: $light-base !important;
+				background: $red-base !important;
+			}
+		}
+
+		li > a:after{
+			width: 0%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 3px;
+			background: $body-bg;
+			content: '';
+			z-index: 5;
+			transition: .2s all;
+		}		
+
+		li > a:hover{
+			color: $body-bg;
+			background: $red-base;
+
+			&:after{
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 3px;
+				background: $body-bg;
+				content: '';
+			}
+		}
+
+		li > a.active{
+			&:after{
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 3px;
+				background: $body-bg;
+				content: '';
+			}			
+		}
+	}
+
+	.tp-search-box{
+		  @include respond-to(phones) { display: none; }
+		  @include respond-to(width990) { margin-top: 30px; }
+		  input[type="text"] {
+	            padding: 25px 10px;
+	            transition: .2s;
+	            &:focus{
+	            	background: $gray-base;
+	            	color: $body-bg;
+	            }
+		  }
+		  .btn{
+			border: 0;
+			background-color: transparent;
+			span{     
+				color: #fff;
+    			font-size: 26px;
+			}
+		  }
+	}
+ 
+	.tp-login{
+		float: right;		
+		padding-top: 10px;
+		cursor: pointer;
+
+		a{
+			display: none;
+			&.tp-mobile-login{
+				@include respond-to(phones) { position: absolute; top: 18px; right: 5px;}
+				@include respond-to(tablets) { position: absolute; top: 18px; right: 5px;}
+				display: block;
+			}
+		}
+		@include respond-to(width1280){ 
+		    a{
+		    	display: inline-block;
+				&.tp-mobile-login{
+					display: none;
+				}		    	
+		    }
+		}
+
+		a{
+			font-size: 13px;
+			color: $light-base; 
+			@extend .roboto-light;
+			text-decoration: none;
+			padding: 10px;
+
+			span{ margin-right: 5px;}	
+		}
+	}
+
+}

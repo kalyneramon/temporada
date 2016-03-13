@@ -1,0 +1,23 @@
+.tp-page-404{
+	min-height: 900px;
+	margin-top: 200px;
+
+	.tp-title-page{
+		width: 100%;
+		display: inline-block;
+		font-size: 150px; 
+		color: $red-base;
+		font-family: $font-chunck;
+		text-align: center;
+		padding-top: 100px;
+		margin: 0;
+		@include respond-to(width990max){ font-size: 90px; }
+	}
+
+	.tp-text{
+		color: $gray-base;
+		font-size: 22px;
+		text-align: center;
+	}
+
+}

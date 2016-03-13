@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    BOOTSTRAP AND SETTINGS
+\*------------------------------------*/
+@import "customVariables";
+@import "base";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass"; 
+
+/*------------------------------------*\
+    CSS TEMPORADA
+\*------------------------------------*/
+@import "header";
+@import "footer";
+@import "main";
+@import "series";
+@import "modules";
+@import "animate.css";
+@import "jquery.bxslider.css"
+
+
+
+   

@@ -1,0 +1,7 @@
+.icon-movie, .icon-svg{
+	fill: #151515;
+} 
+.tp-box-review .icon-movie,.tp-box-review .icon-svg{
+	fill: #ffffff;
+} 
+.tp-latest-series .bx-viewport:hover .tp-latest-inner .icon-movie{ fill: #e2dec9 !important; }	

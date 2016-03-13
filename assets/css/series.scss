@@ -1,0 +1,332 @@
+/*------------------------------------*\
+    FILTERS
+\*------------------------------------*/
+.tp-filters{
+  //  width: 100%;
+   // display: inline-block;
+    margin: 50px 0;
+
+    .tp-category{
+	   margin-bottom: 20px;
+    }
+
+	.tp-title-filter{
+		@extend .roboto-light;
+		font-size: 24px;
+		display: inline-block;
+		padding-right: 20px;
+		color: $gray-base;
+	}
+
+	.dropdown{ 
+		display: inline; 
+
+		.dropdown-toggle{
+		    border-radius: 0;
+		    border: 0;
+		    font-size: 20px;
+		    padding: 10px 27px;
+		    margin: 0;
+		    margin-top: -10px;		
+		    @extend .roboto-light;
+		    &:hover, &:focus{
+		    	background: $light-base;
+		    }
+
+		    .caret{
+		    	border-top-color: $red-base;
+		    }	 
+		}		
+ 
+	}
+
+	.tp-view{
+		.tp-type-view{
+			a{
+				padding: 10px 20px;
+				background: $light-base;
+				font-size: 24px;
+				@extend .roboto-light;
+				color: $red-base;
+				&:hover{
+					text-decoration: none;
+					color: $gray-base; 
+				}
+				@include respond-to(phones){
+				    font-size: 17px;
+				    line-height: 45px;
+				    margin-bottom: 10px;
+				    padding: 2px 10px;
+				    width: 100%;
+				    display: inline-block;
+				}
+				@include respond-to(tablets){
+				    font-size: 17px;
+				    line-height: 45px;
+				    margin-bottom: 10px;
+				    padding: 2px 10px;
+				    width: 100%;
+				    display: inline-block;
+				}				
+			}
+			&.active a{
+				background: $gray-base;
+				color: $light-base;
+			}
+		}
+	}
+
+	.tp-letters{
+		width: 100%;
+		background: $light-base;
+		padding: 4px;
+		display: inline-block;
+		margin:30px 0;
+
+		.tp-letter{
+			font-size: 17px;
+			@extend .roboto-regular;
+			display: inline-block;
+			list-style: none;			
+		    padding: 10px 13px;
+
+			a{
+				color: $gray-base;
+				&:hover{
+					color: $red-base;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+/*------------------------------------*\
+    PAGE SERIES LIST
+\*------------------------------------*/
+.tp-page-series{
+	
+	.tp-header{
+		width: 100%;
+		display: inline-block;
+		height: 272px;
+		background: url(../images/background-list-series.jpg) no-repeat top center;
+		background-size: cover;
+		@include respond-to(phones) { height: 50px; }
+		@include respond-to(tablets) { height: 50px; }		
+
+		.tp-title-page{
+			width: 100%;
+			display: inline-block;
+			font-size: 60px;
+			color: $red-base;
+			font-family: $font-chunck;
+			text-align: center;
+			padding-top: 100px;
+			margin: 0;
+			@include respond-to(phones) { padding-top: 20px; }
+			@include respond-to(tablets) { padding-top: 20px; }				
+		}
+	}
+
+	.tp-serie{
+		margin-bottom: 60px;
+
+		.tp-featured-image{
+			overflow: hidden !important;
+			padding: 0;
+		}
+
+		.tp-serie-content{
+			padding: 20px;
+
+			.tp-title-serie{
+				color: $gray-base;
+				@extend .roboto-bold;
+				font-style: italic;
+				font-size: 34px;
+				margin: 0;
+				padding: 5px 0;
+				a{
+					color: $gray-base;
+					text-decoration: none;
+					&:hover{
+						color: $red-base;
+					}
+				}
+			}
+
+			.tp-season{
+				color: $gray-base; 
+				font-size: 22px;
+				@extend .roboto-light;
+				padding: 5px 0;
+			}
+
+			.tp-last-episodes{
+				padding: 5px 0;
+
+				.tp-head{
+					@extend .roboto-bold;
+					font-style: italic;
+					font-size: 14px;
+					color: $red-base;
+				    display: inline-block;
+				}
+
+				li.tp-ep a{
+					@extend .roboto-regular;
+					color: $gray-base;
+					font-size: 20px;
+				}
+
+			}
+
+			.tp-votes{ 
+				padding: 5px 0;
+				@extend .roboto-bold;
+				font-style: italic;
+				font-size: 14px;
+				color: $red-base;
+
+				.tp-vote{
+					font-size: 26px;
+					@extend .roboto-bold;
+					color: $gray-base; 
+					width: 100%;
+					display: inline-block;
+				}
+			}
+		}
+	}
+} 
+
+/*------------------------------------*\
+    SERIE SINGLE PAGE
+\*------------------------------------*/
+.tp-page-serie-single{
+
+	.tp-header-serie{
+		width: 100%;
+		display: inline-block;
+		padding: 40px 0;
+		background: $gray-base;
+		margin-bottom: 50px;
+
+		.tp-title-serie{
+			width: 100%;
+			display: inline-block;
+			font-size: 60px;
+			color: $red-base;
+			font-family: $font-chunck;
+			text-align: center;
+			margin: 0; 
+			@include respond-to(phones) { font-size: 30px; }
+			@include respond-to(tablets) { font-size: 30px; }				
+		}
+
+		.tp-date-serie{
+			width: 100%;
+			display: inline-block; 
+			font-size: 22px;
+			color: $light-base;
+			@extend .roboto-light;
+			text-align: center;
+			margin: 0;			
+		}
+	}
+
+	.tp-featured-image{
+		overflow: hidden;
+
+		img{ width: 100%; }
+	}
+
+	.tp-serie-content{
+
+		.tp-description{
+			@extend .roboto-light;
+			font-size: 17px;
+			color: $gray-base;
+
+			.tp-title-description{
+				@extend .roboto-bold;
+				font-size: 26px;
+			}
+		}		
+
+		.tp-season{
+			color: $red-base; 
+			font-size: 24px;
+			@extend .roboto-bold;
+			padding: 5px 0;
+		}
+
+		.tp-last-episodes{
+			padding: 5px 0;
+
+			.tp-head{
+				@extend .roboto-bold;
+				font-style: italic;
+				font-size: 14px;
+				color: $red-base;
+			    display: inline-block;
+			}
+
+			li.tp-ep a{ 
+				@extend .roboto-regular; 
+				color: $gray-base;
+				font-size: 20px;
+			}
+
+		}
+
+		.tp-votes{ 
+			padding: 5px 0;
+			@extend .roboto-bold;
+			font-style: italic;
+			font-size: 14px;
+			color: $red-base;
+
+			.tp-vote{
+				font-size: 26px;
+				@extend .roboto-bold;
+				color: $gray-base; 
+				width: 100%;
+				display: inline-block;
+			}
+		}
+	}
+
+	.tp-user-actions{
+		margin-top: 50px;
+		width: 100%;
+		display: inline-block;
+
+		a{
+			background: $red-base;
+			padding: 10px;  
+			color: $light-base;
+			font-size: 16px;
+			@extend .roboto-bold;
+			text-decoration: none;
+		    margin: 0 10px 10px 0;
+		    float: left;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: .2s all;
+			&:hover{
+				background: $gray-base;
+				color: #red-base;
+			}
+		}
+	}
+
+}
+ 
+
+
+ 
